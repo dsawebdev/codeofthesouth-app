@@ -6,6 +6,14 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: "AIzaSyBDDIzPg5gwpNog3ziRPwe0v9jltkyVjdI",
+      authDomain: "codeofthesouth-library-app-2.firebaseapp.com",
+      databaseURL: "https://codeofthesouth-library-app-2.firebaseio.com",
+      projectId: "codeofthesouth-library-app-2",
+      storageBucket: "codeofthesouth-library-app-2.appspot.com",
+      messagingSenderId: "662237983085"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
