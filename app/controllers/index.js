@@ -14,12 +14,13 @@ export default Controller.extend({
 
       const newInvitaiton = this.store.createRecord('invitation', {email: email});
 
-      newInvitaiton.save();
-
-      this.set('responseMessage', `Thank You! We've just saved your email address: ${this.get('emailAddress')}`, setTimeout(() => {
-        this.set('responseMessage', '');
-      }, 5000));
-      this.set('emailAddress', '');
+      newInvitaiton.save()
+        .then(res => {
+          this.set('responseMessage', `Thank You! We've just saved your email address with the following id: ${res.get('id')}`, setTimeout(() => {
+            this.set('responseMessage', '');
+          }, 5000));
+          this.set('emailAddress', '');
+        })
     }
   }
 });
