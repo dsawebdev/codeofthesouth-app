@@ -7,7 +7,7 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     firebase: {
-      apiKey: "AIzaSyBDDIzPg5gwpNog3ziRPwe0v9jltkyVjdI",
+      apiKey: "",
       authDomain: "codeofthesouth-library-app-2.firebaseapp.com",
       databaseURL: "https://codeofthesouth-library-app-2.firebaseio.com",
       projectId: "codeofthesouth-library-app-2",

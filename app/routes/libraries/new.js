@@ -9,7 +9,7 @@ export default Route.extend({
 
     saveLibrary(newLibrary){
       newLibrary.save()
-        .then(() => this.transitionTo('libaries'));
+        .then(() => this.transitionTo('/libraries'));
     },
 
     willTransition(){
