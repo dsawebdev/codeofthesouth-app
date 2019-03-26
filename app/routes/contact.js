@@ -9,15 +9,17 @@ export default Route.extend({
   actions:{
     contactSubmit(newContact){
       newContact.save()
-        .then(res => {
-          this.set('responseMessage', `Thank You! for messaging us, we will get back to you at ${res.get('email')}`, setTimeout(() => {
-            this.set('responseMessage', '');
-          }, 5000));
-        })
+        .then(() => this.controller.set('responseMessage'));
     },
 
     willTransition(){
-      this.controller.get('model').rollbackAttributes();
+      let model = this.controller.get('model');
+
+      if(model.get('isNew')) {
+        model.destroyRecord();
+      }
+
+      this.controller.set('responseMessage', false);
     }
   }
 });
